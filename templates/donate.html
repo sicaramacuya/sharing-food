@@ -5,5 +5,84 @@ SharingFood | Donate
 {% endblock %}
 
 {% block content %}
-
+<section class="vh-100" id="top-section" style="background-color: sandybrown;">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light" >
+      <a class="navbar-brand" href="/" style="font-size: 1.50rem;">Sharing Food</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a class="nav-link" href="/donate" style="font-size: 1.50rem;">Donate <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/voluteer" style="font-size: 1.50rem;">Volunteer</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/profile" style="font-size: 1.50rem;">Profile</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+    <div class="container-md mt-4">
+      <h1 class="display-4" style="font-size: 5.6rem;">Want to<br>Share Food?</h1>
+    </div>
+    <div class="container-md pt-5 mb-4">
+        <div class="row">
+            <div class="col-md-8 offset-sm-2">
+                <button type="button" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#staticBackdrop">Yes!</button>
+                <form action="/donate">
+                    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Donation Food Details</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="pick-up-where">Pick Up Where?</label>
+                                            <input type="text" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" id="pick-up-where">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="">Prefered Time</label>
+                                        <input type="time" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" id="">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                        <label for="">Food Items(s)</label>
+                                        <input type="number" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" id="">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                        <label for="">Pick Up Day</label>
+                                        <input type="date" class="form-control border-top-0 border-left-0 border-right-0 rounded-0" id="">
+                                        </div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Food is in good quality.</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">I have checked the expiration date on the food.</label>
+                                    </div>        
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Maybe later</button>
+                                    <input type="submit" class="btn btn-primary" value="Share!"></input>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  </section>
 {% endblock %}
